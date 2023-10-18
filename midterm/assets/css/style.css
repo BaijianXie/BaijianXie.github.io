@@ -170,16 +170,19 @@ img{
 .right-side {
     flex: 1;
     padding: 20px;
+    background-color:#685454
 }
 
 .right-side h1 {
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 10px;
+color:pink;
 }
 
 .right-side p {
-    font-size: 16px;
+    font-size: 24px;
     margin-bottom: 10px;
+    color:pink;
 }
 
 .call-button {
