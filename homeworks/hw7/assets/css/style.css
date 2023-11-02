@@ -1,156 +1,86 @@
-/* -- LOADING ANIMATIONS -- */
-/* Loader one: Pulse */
-.loader.one {
-	width: 100px;
-	height: 100px;
+.nav{
+    /* [Problem 1] 
+        FIXME: Set the width of the nav class to 85px. */
+width:85px;
 }
+.nav--button{
+    /*  [Problem 2]
+        FIXME: Initialize flexbox vertically. Align the text and icons so that they
+        are center aligned. */
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center;
+}
+.dashboard{
+    /*  [Problem 3]
+        FIXME: Add some breathing room! The dashboard portion is a bit tight! 
+        (Hint: use padding!) */
+padding:20px;
+}
+.dashboard--title{
+    /*  [Problem 4]
+        FIXME: Use flex to add the correct spacing between the "Dashboard" text and
+        the three dot button icon that you added previously. Align them to the 
+        center of each item. */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+.dashboard--classes{
+    /*  [Problem 5]
+        FIXME: Use flexbox to make the classes tabs wrap in a 3x2 setup.
+        Use flexbox to create equal spacing between each box. */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+}
+.dashboard--classes__box{
+    /*  [Problem 6]
+        FIXME: Set the widths of each class tab to be 31.5% of the width;
 
-.loader.one .circle {
-	height: 100px;
-	width: 100px;
-	background: #E427F9;
-	position: absolute;
-	top: 0;
-	left: 0;
-	border-radius: 50px;
-	/* TODO: PART 1.2 - Add pulse animation */
-	animation: pulseAnimation 2s infinite; 
+        [Problem 7]
+        FIXME: Add 35px to the space under each box. (Choose carefully!) */
+width:31.5%;
+        margin-bottom: 35px;
+}
+/*  [Problem 8]
+    FIXME: when the dashboard--classes__box class is hovered over, add a
+	darker shadow around the edges of the class tab, just like the real
+	bcourses interface. Use this: 0 4px 10px rgba(0,0,0,0.35)
+
+	Write your own class identifier. */
+
+    .dashboard--classes__box:hover{
+        box-shadow: 0 4px 10px rgba(0, 0, 0,0.35);
+      }
+
+.dashboard--classes__box__image{
+    /*  [Problem 9]
+        FIXME: The class tab should have a border-radius of 5px along the top
+    	of the boxes. 
+
+    	(Hint: Make sure you only add it to the top left and top
+    	right corners. Simply put, the answer is NOT border-radius: 5px.) */
+border-top-left-radius:5px;
+border-top-right-radius:5px;
 
 }
+/*  [Problem 10]
+    FIXME: When h2, h3, and h4 are hovered over, add an underline and
+    change the cursor to a pointer. Write the selectors and the styles!
 
-/* TODO: PART 1.3 - Delay pulse animation for circle two */
-.loader.one .second.circle{
-	animation-delay:  0.5s ;
+    Write your own class identifier. */
+
+    h2:hover,h3:hover,h4:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+.notifications__notifs .notifications__notifs--box{
+    /*  [Problem 11]
+        FIXME: Turn this element into a flex element and use the correct property
+        to align the announcement icon and the text box. */
+        display:flex;
+        align-items:center;
 }
-/* TODO: PART 1.1 - Create pulse animation */
-@keyframes pulseAnimation{
-	from{transform:scale(0);
-	opacity:1;}
-	to{transform:scale(1);
-	opacity:0;
-	}
-}
-/* Loader two: Wave */
-.loader.two {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	width: 110px;
-}
-
-.loader.two .dot {
-	height: 30px;
-	width: 30px;
-	background: #000;
-	border-radius: 15px;
-	background: #F76A4D;
-	/* TODO: PART 2 - Add wave animation */
-	animation: wave 2s infinite;
-}
-
-/* TODO: PART 2 - Add delays and dot colors */
-.loader.two .second {
-	background-color: #4DB1F7;
-	animation-delay: 0.25s; 
-  }
-  
-  .loader.two .third {
-	background-color: #7DE76A;
-	animation-delay: 0.5s; 
-  }
-
-/* TODO: PART 2 - Create wave animation */
-@keyframes wave {
-	0%, 100% {
-	  transform: translateY(0); /* Starting and ending position */
-	}
-	50% {
-	  transform: translateY(-20px); /* Middle position, adjust the value as needed */
-	}
-  }
-  
-/* Loader three: Flip */
-/* TODO: PART 3 - Style the flip card */
-.loader.three .flip-tile {
-	width: 100px;
-	height: 100px;
-	background-color: #F98527;
-	transform-style: preserve-3d; /* Ensure proper 3D rendering */
-  }
-/* TODO: PART 3 - Add flip animation to flip card */
-.loader.three .flip-tile {
-	animation: flip 2.6s infinite; /* 2.6 seconds duration, infinite loop */
-  }
-/* TODO: PART 3 - Write flip animation */
-@keyframes flip {
-	0% {
-	  transform: perspective(300px); /* Start with perspective */
-	}
-	50% {
-	  transform: perspective(300px) rotateY(180deg); /* Flip in the Y-direction */
-	}
-	100% {
-	  transform: perspective(300px) rotateY(180deg) rotateX(180deg); /* Flip horizontally and vertically */
-	}
-  }
-/* Loader four: Spin */
-.loader.four .rings {
-	position: relative;
-	width: 100px;
-	height: 100px;
-}
-
-.loader.four .ring {
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	position: absolute;
-	top: 50%; left: 50%;
-	transform: translate(-50%, -50%);
-	overflow: hidden;
-}
-.loader.four .ring.two {
-	width: 80%;
-	height: 80%;
-}
-.loader.four .ring.three {
-	width: 60%;
-	height: 60%;
-}
-
-.loader.four .ring .mask {
-	width: 93%;
-	height: 93%;
-	border-radius: 50%;
-	position: absolute;
-	top: 50%; left: 50%;
-	transform: translate(-50%, -50%);
-	background: #E5F1F7;
-}
-
-.loader.four .ring .arc-container {
-	width: 80%;
-	height: 100%;
-	position: absolute;
-	left: 10%;
-	overflow: hidden;
-	transform-origin: 50% 50%;
-	/* TODO: PART 4 - Add spin animation */
-}
-
-/* TODO: PART 4 - Add spin shifts for other rings */
-
-.loader.four .ring .arc {
-	width: 100%;
-	height: 50%;
-	position: absolute;
-	background: #10D4C6;
-	/* TODO: PART 4 - Add color animation */
-}
-
-/* TODO: PART 4 - Add spin color shifts for other rings */
-
-/* TODO: PART 4 - Create spin animation */
-
-/* TODO: PART 4 - Create spin color animation */
