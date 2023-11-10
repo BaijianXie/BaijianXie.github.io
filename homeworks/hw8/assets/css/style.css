@@ -1,156 +1,75 @@
-/* -- LOADING ANIMATIONS -- */
-/* Loader one: Pulse */
-.loader.one {
-	width: 100px;
-	height: 100px;
+body {
+	background-color: #181818;
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
 }
 
-.loader.one .circle {
-	height: 100px;
-	width: 100px;
-	background: #E427F9;
-	position: absolute;
-	top: 0;
-	left: 0;
-	border-radius: 50px;
-	/* TODO: PART 1.2 - Add pulse animation */
-	animation: pulseAnimation 2s infinite; 
-
+h1 {
+	font-weight: bold;
 }
 
-/* TODO: PART 1.3 - Delay pulse animation for circle two */
-.loader.one .second.circle{
-	animation-delay:  0.5s ;
+.content {
+	width: 600px;
+	margin: 200px auto auto auto;
 }
-/* TODO: PART 1.1 - Create pulse animation */
-@keyframes pulseAnimation{
-	from{transform:scale(0);
-	opacity:1;}
-	to{transform:scale(1);
-	opacity:0;
-	}
+
+#songs ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
-/* Loader two: Wave */
-.loader.two {
+
+#songs li {
 	display: flex;
-	flex-direction: row;
-	align-items: center;
 	justify-content: space-between;
-	width: 110px;
-}
-
-.loader.two .dot {
-	height: 30px;
-	width: 30px;
-	background: #000;
-	border-radius: 15px;
-	background: #F76A4D;
-	/* TODO: PART 2 - Add wave animation */
-	animation: wave 2s infinite;
-}
-
-/* TODO: PART 2 - Add delays and dot colors */
-.loader.two .second {
-	background-color: #4DB1F7;
-	animation-delay: 0.25s; 
-  }
-  
-  .loader.two .third {
-	background-color: #7DE76A;
-	animation-delay: 0.5s; 
-  }
-
-/* TODO: PART 2 - Create wave animation */
-@keyframes wave {
-	0%, 100% {
-	  transform: translateY(0); /* Starting and ending position */
-	}
-	50% {
-	  transform: translateY(-20px); /* Middle position, adjust the value as needed */
-	}
-  }
-  
-/* Loader three: Flip */
-/* TODO: PART 3 - Style the flip card */
-.loader.three .flip-tile {
-	width: 100px;
-	height: 100px;
-	background-color: #F98527;
-	transform-style: preserve-3d; /* Ensure proper 3D rendering */
-  }
-/* TODO: PART 3 - Add flip animation to flip card */
-.loader.three .flip-tile {
-	animation: flip 2.6s infinite; /* 2.6 seconds duration, infinite loop */
-  }
-/* TODO: PART 3 - Write flip animation */
-@keyframes flip {
-	0% {
-	  transform: perspective(300px); /* Start with perspective */
-	}
-	50% {
-	  transform: perspective(300px) rotateY(180deg); /* Flip in the Y-direction */
-	}
-	100% {
-	  transform: perspective(300px) rotateY(180deg) rotateX(180deg); /* Flip horizontally and vertically */
-	}
-  }
-/* Loader four: Spin */
-.loader.four .rings {
-	position: relative;
-	width: 100px;
-	height: 100px;
-}
-
-.loader.four .ring {
+	padding: 14px 12px;
 	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	position: absolute;
-	top: 50%; left: 50%;
-	transform: translate(-50%, -50%);
-	overflow: hidden;
-}
-.loader.four .ring.two {
-	width: 80%;
-	height: 80%;
-}
-.loader.four .ring.three {
-	width: 60%;
-	height: 60%;
+	border-bottom: 1px solid #282828;
+	font-size: 16px;
 }
 
-.loader.four .ring .mask {
-	width: 93%;
-	height: 93%;
-	border-radius: 50%;
-	position: absolute;
-	top: 50%; left: 50%;
-	transform: translate(-50%, -50%);
-	background: #E5F1F7;
+#songs li:hover {
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
-.loader.four .ring .arc-container {
-	width: 80%;
-	height: 100%;
-	position: absolute;
-	left: 10%;
-	overflow: hidden;
-	transform-origin: 50% 50%;
-	/* TODO: PART 4 - Add spin animation */
+#songs-first-half li:first-child {
+	border-top: 1px solid #282828;
 }
 
-/* TODO: PART 4 - Add spin shifts for other rings */
-
-.loader.four .ring .arc {
-	width: 100%;
-	height: 50%;
-	position: absolute;
-	background: #10D4C6;
-	/* TODO: PART 4 - Add color animation */
+.song-artist {
+	color: #b3b3b3;
 }
 
-/* TODO: PART 4 - Add spin color shifts for other rings */
+#toggle-button {
+	padding: 11px 31px;
+	margin: 20px 0;
+	border: 1px solid #b3b3b3;
+	border-radius: 31px;
+	font-size: 12px;
+	color: #e6e6e6;
+	text-transform: uppercase;
+	background: transparent;
+}
 
-/* TODO: PART 4 - Create spin animation */
+#toggle-button:hover {
+	font-weight: bold;
+	font-size: 13px;
+	color: #fff;
+	border-color: #fff;
+}
 
-/* TODO: PART 4 - Create spin color animation */
+#toggle-button:focus {
+	outline: none;
+}
+
+#toggle-button:active {
+	border-color: #838383;
+	font-weight: normal;
+	font-size: 12px;
+	color: #ccc;
+}
+
+/* Problem 3.1 */
+.hidden{
+	display:none;
+}
