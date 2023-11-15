@@ -1,5 +1,5 @@
 function toggleTheme(){
-    let bodyDarkmode = document.getElementById("body");
+    let bodyDarkmode = document.body;
     bodyDarkmode.classList.toggle("dark-mode");
 
 }
