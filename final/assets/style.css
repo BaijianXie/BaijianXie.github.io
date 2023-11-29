@@ -1,0 +1,146 @@
+
+#full{
+    margin:0;
+}
+#page{
+    height:100vh;
+    display:flex;
+
+
+    
+}
+
+h4{
+    opacity: 0.5;
+}
+
+.fp{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    text-align:center;
+
+    background-color:#cccccc;
+}
+.sp{
+    background-color: #666666;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+#button-next{
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+position:absolute;
+bottom:0;
+}
+
+.title{
+    position:absolute;
+    top:200px;
+    font-size:25px;
+    animation: fadeIn 5s;
+}
+
+.HB{
+    position: absolute;
+    bottom:250px;
+    animation: fadeIn 10s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.box1,.box2, .carousel-image,.content1,.content2,.content3 {
+        width: 448px;
+        height: 300px;
+}
+
+.content1{
+
+    margin-left:25px;
+    color:rgb(237, 232, 232);
+}
+.content2{
+
+    
+    color:rgb(237, 232, 232);
+}
+.content3{
+
+    color:rgb(237, 232, 232);
+}
+
+#bigbox{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction:row;
+}
+  .box1 {
+    position: relative;
+    border: 5px solid #669999;
+    overflow: hidden;
+    /* Part 3.2: Hide stuff that overflows the box */
+    
+    transition: 0.5s left;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+  .box2{
+    display:flex;
+    position:relative;
+    overflow: hidden;
+    text-align:left;
+
+    border-bottom:5px solid #669999;
+    border-top:5px solid #669999;
+    border-right:5px solid #669999;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius:25px;
+    background-color:#336666;
+  }
+
+.img{
+    flex-direction:row;
+    display: flex;
+    position:relative;
+left:0px;
+}
+
+  .hidden {
+    visibility: hidden;
+  }
+
+p{
+    margin-top:50px;
+}
+.textB{
+    flex-direction:row;
+    display: flex;
+    position:relative;
+
+}
+#controls{
+    flex-direction:row;
+    display: flex;
+    position:relative;
+justify-content:space-between;
+
+}
+#firstButton:hover {
+    cursor: pointer;
+  }
+  #secondButton:hover {
+    cursor: pointer;
+  }
+  #thirdButton:hover {
+    cursor: pointer;
+  }
