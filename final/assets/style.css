@@ -144,3 +144,19 @@ justify-content:space-between;
   #thirdButton:hover {
     cursor: pointer;
   }
+
+  @keyframes bounce {
+    form{
+      transform: translateY(-10px);
+    }
+    to {
+      transform: translateY(30px);
+    }
+  }
+  
+  #button-next{
+
+      z-index: 1;
+      transform: translateY(-10px);
+      animation: bounce 0.45s ease-in 0s infinite alternate;
+  }
